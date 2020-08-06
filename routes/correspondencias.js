@@ -8,12 +8,12 @@ const scopesValidation = require(path.join(__dirname, '../middlewares/scopesVali
 // Partner Controller
 const correspondenciasController = require(path.join(__dirname, '../controllers/correspondencias/correspondenciasController'))
 
-route.post('/', [checkAuth,scopesValidation(['create:correspondencias'])], correspondenciasController.store)
+route.post('/', [checkAuth], correspondenciasController.store)
 
-route.get('/',  [checkAuth,scopesValidation(['show:correspondencias'])], correspondenciasController.index)
-route.get('/:id', [checkAuth,scopesValidation(['show:correspondencias'])], correspondenciasController.show)
+route.get('/',  [checkAuth], correspondenciasController.index)
+route.get('/:id', [checkAuth], correspondenciasController.show)
 
-route.delete('/:id', [checkAuth,scopesValidation(['detroy:correspondencias'])], correspondenciasController.destroy)
-route.put('/:id', [checkAuth,scopesValidation(['update:correspondencias'])], correspondenciasController.update)
+route.delete('/:id', [checkAuth], correspondenciasController.destroy)
+route.put('/:id', [checkAuth], correspondenciasController.update)
 
 module.exports = route

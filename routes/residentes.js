@@ -8,12 +8,12 @@ const scopesValidation = require(path.join(__dirname, '../middlewares/scopesVali
 // Partner Controller
 const residentesController = require(path.join(__dirname, '../controllers/residentes/residentesController'))
 
-route.post('/', [checkAuth,scopesValidation(['create:residentes'])], residentesController.store)
+route.post('/', [checkAuth], residentesController.store)
 
-route.get('/',  [checkAuth,scopesValidation(['show:residentes'])], residentesController.index)
-route.get('/:id', [checkAuth,scopesValidation(['show:residentes'])], residentesController.show)
+route.get('/',  [checkAuth], residentesController.index)
+route.get('/:id', [checkAuth], residentesController.show)
 
-route.delete('/:id', [checkAuth,scopesValidation(['detroy:residentes'])], residentesController.destroy)
-route.put('/:id', [checkAuth,scopesValidation(['update:residentes'])], residentesController.update)
+route.delete('/:id', [checkAuth], residentesController.destroy)
+route.put('/:id', [checkAuth], residentesController.update)
 
 module.exports = route

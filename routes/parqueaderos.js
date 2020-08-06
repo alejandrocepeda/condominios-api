@@ -8,12 +8,12 @@ const scopesValidation = require(path.join(__dirname, '../middlewares/scopesVali
 // Partner Controller
 const parqueaderosController = require(path.join(__dirname, '../controllers/parqueaderos/parqueaderosController'))
 
-route.post('/', [checkAuth,scopesValidation(['create:parqueaderos'])], parqueaderosController.store)
+route.post('/', [checkAuth], parqueaderosController.store)
 
-route.get('/',  [checkAuth,scopesValidation(['show:parqueaderos'])], parqueaderosController.index)
-route.get('/:id', [checkAuth,scopesValidation(['show:parqueaderos'])], parqueaderosController.show)
+route.get('/',  [checkAuth], parqueaderosController.index)
+route.get('/:id', [checkAuth], parqueaderosController.show)
 
-route.delete('/:id', [checkAuth,scopesValidation(['detroy:parqueaderos'])], parqueaderosController.destroy)
-route.put('/:id', [checkAuth,scopesValidation(['update:parqueaderos'])], parqueaderosController.update)
+route.delete('/:id', [checkAuth], parqueaderosController.destroy)
+route.put('/:id', [checkAuth], parqueaderosController.update)
 
 module.exports = route

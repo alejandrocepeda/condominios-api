@@ -1,5 +1,5 @@
 const Parqueaderos = require('../models').parqueaderos
-const Residentes = require('../models').residentes
+const Apartamentos = require('../models').apartamentos
 const Conjuntos = require('../models').conjuntos
 
 const abstractService = require('./abstract/abstractService')
@@ -11,7 +11,7 @@ class ParqueaderosService extends abstractService {
 
         const relations = {
             include:[
-                { model: Residentes},
+                { model: Apartamentos},
                 { model: Conjuntos}
             ]
         }     

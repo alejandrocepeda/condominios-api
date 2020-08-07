@@ -11,7 +11,7 @@ async function store (req, res, next) {
         apartamento_id: req.body.name,
         apartamento_id:req.body.apartamento_id,
         autorizacion:req.body.autorizacion,
-        place:req.body.place,
+        placa:req.body.placa,
         puesto:req.body.puesto,
       }
       
@@ -61,7 +61,7 @@ async function update (req, res, next) {
     apartamento_id: req.body.name,
     apartamento_id:req.body.apartamento_id,
     autorizacion:req.body.autorizacion,
-    place:req.body.place,
+    placa:req.body.placa,
     puesto:req.body.puesto,
   }
 

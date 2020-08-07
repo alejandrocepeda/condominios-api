@@ -20,7 +20,7 @@ module.exports = {
       autorizacion: {
         type:Sequelize.STRING
       },      
-      place: {
+      placa: {
         type:Sequelize.STRING
       },      
       puesto: {

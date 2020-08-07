@@ -19,7 +19,7 @@ module.exports = (sequelize,DataTypes) => {
     autorizacion: {
         type:DataTypes.STRING
     },      
-    place: {
+    placa: {
         type:DataTypes.STRING
     },      
     puesto: {

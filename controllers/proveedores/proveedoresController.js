@@ -7,8 +7,19 @@ async function store (req, res, next) {
     try{  
 
       let toCreate = {        
-        name: req.body.name,
-        conjunto_id: req.body.conjunto_id,
+        name: req.body.name,        
+        name: req.body.name,    
+        nit: req.body.nit,
+        direccion:req.body.direccion,
+        licitaciones:req.body.licitaciones,
+        referido: req.body.referido,
+        telefono: req.body.telefono,
+        celular:req.body.celular,
+        correo:req.body.correo,
+        sitio_web: req.body.sitio_web,
+        categoria:req.body.categoria,
+        cantidad:req.body.cantidad,
+        conjunto_id:req.body.conjunto_id,
       }
       
       const category = await proveedoresService.Create(toCreate)
@@ -53,8 +64,19 @@ async function update (req, res, next) {
 
   
   let toUpdate = {
-    name: req.body.name,
-    conjunto_id: req.body.conjunto_id,
+    name: req.body.name,        
+    name: req.body.name,    
+    nit: req.body.nit,
+    direccion:req.body.direccion,
+    licitaciones:req.body.licitaciones,
+    referido: req.body.referido,
+    telefono: req.body.telefono,
+    celular:req.body.celular,
+    correo:req.body.correo,
+    sitio_web: req.body.sitio_web,
+    categoria:req.body.categoria,
+    cantidad:req.body.cantidad,
+    conjunto_id:req.body.conjunto_id,
   }
 
   toUpdate = req.omit(toUpdate)

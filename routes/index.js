@@ -16,6 +16,8 @@ route.use('/conjuntos', require(path.join(__dirname, '/conjuntos')))
 route.use('/residentes', require(path.join(__dirname, '/residentes')))
 route.use('/correspondencias', require(path.join(__dirname, '/correspondencias')))
 route.use('/proveedores', require(path.join(__dirname, '/proveedores')))
+route.use('/apartamentos', require(path.join(__dirname, '/apartamentos')))
+route.use('/visitantes', require(path.join(__dirname, '/visitantes')))
 
 
 

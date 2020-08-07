@@ -10,10 +10,39 @@ module.exports = (sequelize,DataTypes) => {
     name: {
         type: DataTypes.STRING,
         allowNull:false
+    },    
+    nit: {
+        type:DataTypes.STRING
+    },
+    direccion: {
+        type:DataTypes.STRING
+    },
+    licitaciones: {
+        type:DataTypes.BOOLEAN
+    },
+    referido: {
+        type:DataTypes.STRING
+    },
+    telefono: {
+        type:DataTypes.STRING
+    },
+    celular: {
+        type:DataTypes.STRING
+    },
+    correo: {
+        type:DataTypes.STRING
+    },
+    sitio_web: {
+        type:DataTypes.STRING
+    },
+    categoria: {
+        type:DataTypes.BOOLEAN
+    },
+    cantidad: {
+        type:DataTypes.INTEGER
     },
     conjunto_id: {
-        type: DataTypes.INTEGER,
-        allowNull:false
+        type:DataTypes.INTEGER
     }
   })
   

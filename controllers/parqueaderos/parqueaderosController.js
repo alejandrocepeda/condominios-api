@@ -7,8 +7,10 @@ async function store (req, res, next) {
     try{  
 
       let toCreate = {        
+        name: req.body.name,
         conjunto_id: req.body.conjunto_id,
-        residente_id: req.body.residente_id
+        apartamento_id: req.body.apartamento_id,
+        tipo_parqueadero: req.body.tipo_parqueadero,
       }
       
       const category = await parqueaderosService.Create(toCreate)
@@ -53,8 +55,10 @@ async function update (req, res, next) {
 
   
   let toUpdate = {
+    name: req.body.name,
     conjunto_id: req.body.conjunto_id,
-    residente_id: req.body.residente_id
+    apartamento_id: req.body.apartamento_id,
+    tipo_parqueadero: req.body.tipo_parqueadero,
   }
 
   toUpdate = req.omit(toUpdate)

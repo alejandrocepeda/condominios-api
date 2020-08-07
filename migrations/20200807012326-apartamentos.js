@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('parqueaderos',{
+    return queryInterface.createTable('apartamentos',{
       id: {
         type:Sequelize.INTEGER,    
         autoIncrement:true,
@@ -14,21 +14,12 @@ module.exports = {
       },
       conjunto_id: {
         type:Sequelize.INTEGER,
-        allowNull:false
+        primaryKey:true
       },
-      apartamento_id: {
-        type: Sequelize.INTEGER,
-        allowNull:false
-      },
-      tipo_parqueadero: {
-        type: Sequelize.INTEGER,
-        allowNull:false
-      }
-      
     });
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('parqueaderos');
+    return queryInterface.dropTable('apartamentos');
   }
 };

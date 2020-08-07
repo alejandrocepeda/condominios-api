@@ -11,6 +11,30 @@ module.exports = {
       name: {
         type:Sequelize.STRING,
         allowNull:false
+      },
+      direccion: {
+        type:Sequelize.STRING
+      },
+      nit: {
+        type:Sequelize.STRING
+      },
+      tipo_conjunto_id: {
+        type:Sequelize.INTEGER
+      },
+      ciudad_id: {
+        type:Sequelize.INTEGER
+      },
+      pais_id: {
+        type:Sequelize.INTEGER
+      },
+      moneda: {
+        type:Sequelize.STRING
+      },
+      logo: {
+        type:Sequelize.STRING
+      },
+      pago_electronico: {
+        type:Sequelize.BOOLEAN
       }
     });
   },

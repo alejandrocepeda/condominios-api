@@ -35,11 +35,19 @@ module.exports = (sequelize,DataTypes) => {
     pago_electronico: {
       type:DataTypes.BOOLEAN
     }
-  }
-
-
-)
+  })
   
+  conjuntos.associate = (models) => {
+    
+
+    conjuntos.belongsTo(models.ciudades,{                    
+        foreignKey: 'ciudad_id'
+    })
+
+    conjuntos.belongsTo(models.paises,{                    
+      foreignKey: 'pais_id'
+  })
+  }
 
   return conjuntos
 }

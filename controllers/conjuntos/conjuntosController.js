@@ -7,7 +7,15 @@ async function store (req, res, next) {
     try{  
 
       let toCreate = {        
-        name: req.body.name
+        name: req.body.name,
+        direccion: req.body.direccion,
+        nit: req.body.nit,
+        tipo_conjunto_id:req.body.tipo_conjunto_id,
+        ciudad_id: req.body.ciudad_id,
+        pais_id: req.body.pais_id,
+        moneda: req.body.moneda,
+        logo: req.body.logo,
+        pago_electronico: req.body.pago_electronico
       }
       
       const category = await conjuntosService.Create(toCreate)
@@ -52,7 +60,15 @@ async function update (req, res, next) {
 
   
   let toUpdate = {
-    name: req.body.name
+    name: req.body.name,
+    direccion: req.body.direccion,
+    nit: req.body.nit,
+    tipo_conjunto_id:req.body.tipo_conjunto_id,
+    ciudad_id: req.body.ciudad_id,
+    pais_id: req.body.pais_id,
+    moneda: req.body.moneda,
+    logo: req.body.logo,
+    pago_electronico: req.body.pago_electronico
   }
 
   toUpdate = req.omit(toUpdate)

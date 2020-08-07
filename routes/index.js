@@ -19,6 +19,9 @@ route.use('/proveedores', require(path.join(__dirname, '/proveedores')))
 route.use('/apartamentos', require(path.join(__dirname, '/apartamentos')))
 route.use('/visitantes', require(path.join(__dirname, '/visitantes')))
 
+route.use('/ciudades', require(path.join(__dirname, '/ciudades')))
+route.use('/paises', require(path.join(__dirname, '/paises')))
+
 
 
 module.exports = route

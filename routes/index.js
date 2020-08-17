@@ -23,5 +23,14 @@ route.use('/ciudades', require(path.join(__dirname, '/ciudades')))
 route.use('/paises', require(path.join(__dirname, '/paises')))
 
 
+route.use('/casos', require(path.join(__dirname, '/casos')))
+route.use('/comunicados', require(path.join(__dirname, '/comunicados')))
+route.use('/mudanzas', require(path.join(__dirname, '/mudanzas')))
+route.use('/novedades-faltas', require(path.join(__dirname, '/novedadesFaltas')))
+route.use('/ubicacion-apartamentos', require(path.join(__dirname, '/ubicacionApartamentos')))
+
+
+
+
 
 module.exports = route

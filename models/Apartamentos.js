@@ -11,6 +11,12 @@ module.exports = (sequelize,DataTypes) => {
         type: DataTypes.STRING,
         allowNull:false
     },
+    id_ubicacion_apartamento: {
+      type:DataTypes.INTEGER
+    },
+    numero_apartamento: {
+      type:DataTypes.INTEGER
+    },
     conjunto_id: {
         type: DataTypes.INTEGER,
         allowNull:false
